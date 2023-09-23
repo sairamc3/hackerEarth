@@ -34,7 +34,11 @@ public class FavouriteSinger {
 
             for( Long distinctValue: distinctValues){
 
-               noOfDistinct.put(distinctValue, numbers.stream().filter(distinctValue::equals).count());
+               noOfDistinct.put(distinctValue,
+                       numbers.stream()
+                               .filter(distinctValue::equals)
+                               .count()
+               );
 
             }
 
